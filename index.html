@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirFormTable</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./dist/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./dist/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./dist/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./dist/img/favicon/site.webmanifest">
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body>
+
+    <!-- Navbar  -->
+    <nav class="max-w-screen-xl px-5 xl:px-0 mx-auto flex flex-wrap items-center justify-between py-6 sm:pt-8 sm:pb-6">
+        <a href="#">
+            <img src="./dist/img/logo.png" class="" alt="logo">
+        </a>
+        <div class="flex md:hidden">
+            <button id="hamburger">
+                <img class="toggle block w-7" src="./dist/img/burger-menu.svg" width="40" height="40" />
+                <img class="toggle hidden w-7" src="./dist/img/close-x.svg" width="40" height="40" />
+            </button>
+        </div>
+        <div class="toggle hidden w-full md:w-auto md:flex  mt-5 md:mt-0">
+            <a href="#"
+                class="block md:inline-block text-white hover:text-white px-3 py-3 font-fontSecondary text-base">Features</a>
+            <a href="#"
+                class="block md:inline-block text-white hover:text-white px-3 py-3 font-fontSecondary text-base">Pricing</a>
+            <a href="#"
+                class="block md:inline-block text-white hover:text-white px-3 py-3 font-fontSecondary text-base">FAQ</a>
+        </div>
+
+        <div
+            class="toggle hidden md:flex w-full md:w-auto md:text-right items-center md:space-x-4 space-y-4 md:space-y-0">
+            <a href="#"
+                class="block md:inline-block text-white hover:text-white font-fontSecondary text-base px-3 py-3  md:p-0">Login</a>
+            <a href="#" class="flex items-center theme-btn justify-center">Create a new form
+                <span>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="ArrowRight">
+                            <path id="Vector"
+                                d="M12.122 7.30953L8.18453 11.247C8.10244 11.3291 7.9911 11.3752 7.875 11.3752C7.7589 11.3752 7.64756 11.3291 7.56547 11.247C7.48338 11.1649 7.43726 11.0536 7.43726 10.9375C7.43726 10.8214 7.48338 10.7101 7.56547 10.628L10.7565 7.4375H2.1875C2.07147 7.4375 1.96019 7.39141 1.87814 7.30936C1.79609 7.22731 1.75 7.11603 1.75 7C1.75 6.88397 1.79609 6.77269 1.87814 6.69064C1.96019 6.60859 2.07147 6.5625 2.1875 6.5625H10.7565L7.56547 3.37203C7.48338 3.28994 7.43726 3.1786 7.43726 3.0625C7.43726 2.9464 7.48338 2.83506 7.56547 2.75297C7.64756 2.67088 7.7589 2.62476 7.875 2.62476C7.9911 2.62476 8.10244 2.67088 8.18453 2.75297L12.122 6.69047C12.1627 6.7311 12.195 6.77935 12.217 6.83246C12.239 6.88557 12.2503 6.9425 12.2503 7C12.2503 7.05749 12.239 7.11442 12.217 7.16754C12.195 7.22065 12.1627 7.2689 12.122 7.30953Z"
+                                fill="white" />
+                        </g>
+                    </svg>
+                </span></a>
+        </div>
+    </nav>
+
+
+    <!-- banner -->
+    <section class="max-w-screen-xl pt-12 md:pt-20 px-5 xl:px-0 mx-auto text-center">
+
+        <!-- Launch offer -->
+        <div class="mx-auto max-w-[346px] px-4 py-1.5 rounded-3xl c-gradient">
+            <p class="flex items-center justify-center text-base sm:text-lg font-medium tracking-[-0.28px] text-white">
+                Launch offer
+                <object data="./dist/img/RocketLaunch.svg" type="image/svg+xml" class="mx-1 sm:mx-2"></object>
+                50% off all our plans
+            </p>
+        </div>
+
+        <!-- Banner title -->
+        <h1 class="max-w-5xl text-3xl sm:text-5xl text-white lg:text-7xl font-semibold mt-6 pb-11 mx-auto">
+            Beautiful Advanced Forms made for
+            <object data="./dist/img/blocks.svg" type="image/svg+xml"
+                class="inline mx-2 sm:mx-4 w-12 sm:w-auto"></object>
+            Airtable
+        </h1>
+
+        <!-- Banner action -->
+        <a href="#" class="theme-btn inline-flex items-center">Create a new form
+            <span>
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="ArrowRight">
+                        <path id="Vector"
+                            d="M12.122 7.30953L8.18453 11.247C8.10244 11.3291 7.9911 11.3752 7.875 11.3752C7.7589 11.3752 7.64756 11.3291 7.56547 11.247C7.48338 11.1649 7.43726 11.0536 7.43726 10.9375C7.43726 10.8214 7.48338 10.7101 7.56547 10.628L10.7565 7.4375H2.1875C2.07147 7.4375 1.96019 7.39141 1.87814 7.30936C1.79609 7.22731 1.75 7.11603 1.75 7C1.75 6.88397 1.79609 6.77269 1.87814 6.69064C1.96019 6.60859 2.07147 6.5625 2.1875 6.5625H10.7565L7.56547 3.37203C7.48338 3.28994 7.43726 3.1786 7.43726 3.0625C7.43726 2.9464 7.48338 2.83506 7.56547 2.75297C7.64756 2.67088 7.7589 2.62476 7.875 2.62476C7.9911 2.62476 8.10244 2.67088 8.18453 2.75297L12.122 6.69047C12.1627 6.7311 12.195 6.77935 12.217 6.83246C12.239 6.88557 12.2503 6.9425 12.2503 7C12.2503 7.05749 12.239 7.11442 12.217 7.16754C12.195 7.22065 12.1627 7.2689 12.122 7.30953Z"
+                            fill="white" />
+                    </g>
+                </svg>
+            </span>
+        </a>
+        <span class="block mt-2 text-sm">
+            7-days free trial
+        </span>
+
+    </section>
+
+
+    <!-- Our products  -->
+    <section class="pt-12 sm:pt-16 px-5 xl:px-0 mx-auto max-w-[900px]">
+        <h2 class="text-center mb-6 text-lg">
+            Our products are trusted by 2,000+ companies
+        </h2>
+        <!-- Product Trusted Logos -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="partner">
+                <img src="./dist/img/harvard.png" alt="harvard">
+            </div>
+            <div class="partner">
+                <img src="./dist/img/yale.png" alt="yale">
+            </div>
+            <div class="partner">
+                <img src="./dist/img/figma.png" alt="figma">
+            </div>
+            <div class="partner">
+                <img src="./dist/img/microsoft.png" alt="microsoft">
+            </div>
+            <div class="partner">
+                <img src="./dist/img/ftx.png" alt="ftx">
+            </div>
+            <div class="partner">
+                <img src="./dist/img/deel.png" alt="deel">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- video   -->
+    <section class="max-w-screen-xl pt-12 px-5 xl:px-0 mx-auto ">
+        <div class="rounded-2xl p-4 border-dark border c-gradient">
+            <img class="w-full" src="./dist/img/video.png" alt="video">
+        </div>
+    </section>
+
+
+    <!-- About AirFormTable  -->
+    <section class="max-w-screen-xl pt-14 sm:pt-20 md:pt-32 px-5 xl:px-0 mx-auto">
+        <div class="max-w-[900px] text-center mx-auto">
+            <p class="text-blue flex justify-center item-center text-lg mb-2 gap-1">
+                <object data="./dist/img/PaperPlaneTilt.svg" type="image/svg+xml"></object>
+                Introducing AirFormTable
+            </p>
+            <h3 class="mb-6 text-3xl md:text-4xl lg:text-[64px] font-bold leading-[1.2] tracking-[-2.56px]">All the
+                features you’ve been
+                missing in
+                your forms
+            </h3>
+            <p class="text-lg px-4 text-white tracking-[-0.28px]">
+                AirFormTable lets you build the most advanced forms and collect the submissions directly in your
+                AirTable bases instantly.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-14 sm:mt-20 md:mt-32 gap-10 lg:gap-20 items-center">
+            <div class="order-2 md:order-1">
+                <p class="text-blue flex gap-1 text-lg">
+                    <object data="./dist/img/sparkle.svg" type="image/svg+xml"></object>Better design
+                </p>
+                <h3
+                    class="text-3xl md:text-4xl my-2 leading-[1.2] lg:text-5xl xl:text-[52px] font-bold tracking-[-2.56px]">
+                    Create beautiful forms. On brand
+                </h3>
+                <p class="text-lg text-grey max-w-[530px]">Forms are a reflection of your brand. Don’t settle for
+                    standard
+                    design. Customise our beautiful templates to make your form truly beautiful</p>
+            </div>
+            <div class="order-1 md:order-2 relative">
+                <img class="mx-auto md:ml-auto" src="./dist/img/feature1.png" alt="Form">
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-20 md:mt-32 gap-10 lg:gap-20 items-center">
+            <div class="order-2 md:order-1">
+                <p class="text-blue flex gap-1 text-lg items-center">
+                    <object data="./dist/img/lightning.svg" type="image/svg+xml"></object>Lightning quick
+                </p>
+                <h3
+                    class="text-3xl md:text-4xl leading-[1.2] my-2 lg:text-5xl xl:text-[52px] font-bold tracking-[-2.56px] max-w-[480px]">
+                    Get the submissions directly in your AirTable base
+                </h3>
+                <p class="text-lg text-grey max-w-[530px]">Publish your form as a full web page or embed it on your
+                    website in a
+                    couple of clicks and start receiving the submission in your AirTable base instantly. No code needed.
+                </p>
+            </div>
+            <div class="order-1 md:order-2 relative">
+                <img class="mx-auto md:ml-auto" src="./dist/img/feature2.png" alt="Form">
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 mt-20 md:mt-32 gap-10 lg:gap-20 items-center">
+            <div class="order-2 md:order-1">
+                <p class="text-blue flex gap-1 text-lg items-center"><object data="./dist/img/synchronise.svg"
+                        type="image/svg+xml"></object>Synchronise in real time</p>
+                <h3
+                    class="text-3xl md:text-4xl leading-[1.2] lg:text-5xl xl:text-[52px] my-2 font-bold tracking-[-2.56px]">
+                    Update submissions directly from your form
+                </h3>
+                <p class="text-lg text-grey">You can decide to allow form users to see and update their previous
+                    submissions</p>
+            </div>
+            <div class="order-1 md:order-2 relative">
+                <img class="mx-auto md:ml-auto" src="./dist/img/feature3.png" alt="Form">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services (...and more) -->
+    <section class="max-w-screen-xl pt-20 md:pt-40 px-5 xl:px-0 mx-auto">
+        <div class="max-w-[900px] text-center mx-auto">
+            <h3 class="mb-6 text-3xl md:text-4xl lg:text-[4rem] font-bold leading-[1.2]">...and more
+            </h3>
+            <p class="text-lg px-3 text-grey">
+                AirFormTable lets you build the most advanced forms and collect the submissions directly in your
+                AirTable bases instantly.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-7 mt-12 md:gap-4">
+            <div>
+                <img class="mx-auto w-full" src="./dist/img/card1.png" alt="card">
+            </div>
+            <div>
+                <img class="mx-auto w-full" src="./dist/img/card2.png" alt="card">
+            </div>
+            <div>
+                <img class="mx-auto w-full" src="./dist/img/card3.png" alt="card">
+            </div>
+            <div>
+                <img class="mx-auto w-full" src="./dist/img/card4.png" alt="card">
+            </div>
+            <div>
+                <img class="mx-auto w-full" src="./dist/img/card5.png" alt="card">
+            </div>
+            <div>
+                <img class="mx-auto w-full" src="./dist/img/card6.png" alt="card">
+            </div>
+            <div>
+                <img class="mx-auto w-full" src="./dist/img/card7.png" alt="card">
+            </div>
+            <div>
+                <img class="mx-auto w-full" src="./dist/img/card8.png" alt="card">
+            </div>
+            <div>
+                <img class="mx-auto w-full" src="./dist/img/card9.png" alt="card">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Pricing -->
+    <section class="max-w-screen-xl bg-dark-100 mt-20 md:mt-40 py-20 px-5 xl:px-0 mx-auto rounded-2xl">
+        <div class="max-w-[930px] mx-auto">
+
+
+            <!-- Pricing Title -->
+            <div class=" text-center mx-auto">
+                <p class="text-blue flex justify-center gap-1 text-lg"> <object data="./dist/img/timer.svg"
+                        type="image/svg+xml"></object>Limited time offer</p>
+                <h3 class="my-4 text-3xl md:text-4xl lg:text-[4rem] font-bold leading-[1.2] tracking-[-2.56px]">A
+                    transparent pricing
+                </h3>
+                <p class="text-lg px-3 text-grey font-medium">
+                    More power doesn’t always need to be more expensive
+                </p>
+            </div>
+
+            <!-- price Tables -->
+            <div class="mt-12">
+                <!-- Tabs -->
+                <ul id="tabs" class="w-44 flex mx-auto p-1.5 rounded-3xl c-gradient mb-3">
+                    <li>
+                        <a id="default-tab" class="pill-btn active" href="#monthly">Monthly</a>
+                    </li>
+                    <li>
+                        <a href="#yearly" class="pill-btn">Yearly</a>
+                    </li>
+                </ul>
+                <p class="text-center mb-12">Save 20% with our annual plans</p>
+
+                <!-- Tab Contents -->
+                <div id="tab-contents">
+                    <div id="monthly" class="sm:p-4">
+                        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                            <div class="p-6 sm:p-10 gradient-pro">
+                                <div class="flex mb-6 gap-2 items-center">
+                                    <object data="./dist/img/spinner.svg" type="image/svg+xml"></object>
+                                    <h4 class="text-3xl md:text-[40px] font-semibold">Pro</h4>
+                                </div>
+                                <span class="text-2xl text-grey line-through relative">
+                                    $29.99
+                                </span>
+                                <h3 class="text-5xl md:text-[64px] leading-[1.2] font-bold">
+                                    $14.99
+                                </h3>
+                                <span class="text-base text-white">
+                                    per month
+                                </span>
+                                <div class="theme-btn w-full my-12 flex items-center justify-center">
+                                    Get started for free
+                                    <span>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g id="ArrowRight">
+                                                <path id="Vector"
+                                                    d="M12.122 7.30953L8.18453 11.247C8.10244 11.3291 7.9911 11.3752 7.875 11.3752C7.7589 11.3752 7.64756 11.3291 7.56547 11.247C7.48338 11.1649 7.43726 11.0536 7.43726 10.9375C7.43726 10.8214 7.48338 10.7101 7.56547 10.628L10.7565 7.4375H2.1875C2.07147 7.4375 1.96019 7.39141 1.87814 7.30936C1.79609 7.22731 1.75 7.11603 1.75 7C1.75 6.88397 1.79609 6.77269 1.87814 6.69064C1.96019 6.60859 2.07147 6.5625 2.1875 6.5625H10.7565L7.56547 3.37203C7.48338 3.28994 7.43726 3.1786 7.43726 3.0625C7.43726 2.9464 7.48338 2.83506 7.56547 2.75297C7.64756 2.67088 7.7589 2.62476 7.875 2.62476C7.9911 2.62476 8.10244 2.67088 8.18453 2.75297L12.122 6.69047C12.1627 6.7311 12.195 6.77935 12.217 6.83246C12.239 6.88557 12.2503 6.9425 12.2503 7C12.2503 7.05749 12.239 7.11442 12.217 7.16754C12.195 7.22065 12.1627 7.2689 12.122 7.30953Z"
+                                                    fill="white" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul class="dots-list ">
+                                    <li>
+                                        Unlimited Forms
+                                    </li>
+                                    <li>
+                                        Unlimited Submissions
+                                    </li>
+                                    <li>
+                                        1 workspace
+                                    </li>
+                                    <li>
+                                        1 user
+                                    </li>
+                                    <li>
+                                        File uploads (up to 5MB)
+                                    </li>
+                                    <li>
+                                        Analytics
+                                    </li>
+                                    <li>
+                                        Full form customisation
+                                    </li>
+                                    <li>
+                                        Multi-page forms
+                                    </li>
+                                    <li>
+                                        Form logic
+                                    </li>
+                                    <li>
+                                        Multiple integrations
+                                    </li>
+
+                                    <li>
+                                        Password-gated forms
+                                    </li>
+                                    <li class="text-grey">
+                                        AI Form builder <span class="c-gradient py-1.5 px-2 text-white rounded-full ml-2 text-xs">
+                                            comming soon
+                                        </span>
+                                    </li>
+                                    <li class="text-grey">
+                                        Payment module <span class="c-gradient py-1.5 px-2 text-white rounded-full ml-2 text-xs">
+                                            comming soon
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="p-6 sm:p-10 gradient-enterprise">
+                                <div class="flex mb-6 gap-2 items-center">
+                                    <object data="./dist/img/StarFour.svg" type="image/svg+xml"></object>
+                                    <h4 class="text-3xl md:text-[40px] font-semibold">Enterprise</h4>
+                                </div>
+                                <span class="text-2xl text-grey line-through relative">
+                                    $99.99
+                                </span>
+                                <h3 class="text-5xl md:text-[64px] leading-[1.2] font-bold">
+                                    $59.99
+                                </h3>
+                                <span class="text-base text-white">
+                                    per month
+                                </span>
+                                <div class="theme-btn w-full my-12 flex items-center justify-center">
+                                    Get started for free
+                                    <span>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g id="ArrowRight">
+                                                <path id="Vector"
+                                                    d="M12.122 7.30953L8.18453 11.247C8.10244 11.3291 7.9911 11.3752 7.875 11.3752C7.7589 11.3752 7.64756 11.3291 7.56547 11.247C7.48338 11.1649 7.43726 11.0536 7.43726 10.9375C7.43726 10.8214 7.48338 10.7101 7.56547 10.628L10.7565 7.4375H2.1875C2.07147 7.4375 1.96019 7.39141 1.87814 7.30936C1.79609 7.22731 1.75 7.11603 1.75 7C1.75 6.88397 1.79609 6.77269 1.87814 6.69064C1.96019 6.60859 2.07147 6.5625 2.1875 6.5625H10.7565L7.56547 3.37203C7.48338 3.28994 7.43726 3.1786 7.43726 3.0625C7.43726 2.9464 7.48338 2.83506 7.56547 2.75297C7.64756 2.67088 7.7589 2.62476 7.875 2.62476C7.9911 2.62476 8.10244 2.67088 8.18453 2.75297L12.122 6.69047C12.1627 6.7311 12.195 6.77935 12.217 6.83246C12.239 6.88557 12.2503 6.9425 12.2503 7C12.2503 7.05749 12.239 7.11442 12.217 7.16754C12.195 7.22065 12.1627 7.2689 12.122 7.30953Z"
+                                                    fill="white" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul class="dots-list ">
+                                    <li>
+                                        Everything in <span class="text-blue"> Pro</span>
+                                    </li>
+                                    <li>
+                                        Custom domains
+                                    </li>
+                                    <li>
+                                        Unlimited workspaces
+                                    </li>
+                                    <li>
+                                        Unlimited users per workspace
+                                    </li>
+                                    <li>
+                                        File uploads (up to 20MB)
+                                    </li>
+                                    <li>
+                                        Priority support
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="yearly" class=" hidden sm:p-4">
+                        <div class="grid lg:grid-cols-2 gap-8 lg:gap-12">
+                            <div class="p-6 sm:p-10 gradient-pro">
+                                <div class="flex mb-6 gap-2 items-center">
+                                    <object data="./dist/img/spinner.svg" type="image/svg+xml"></object>
+                                    <h4 class="text-3xl md:text-[40px] font-semibold">Pro</h4>
+                                </div>
+                                <span class="text-2xl text-grey line-through relative">
+                                    $129.99
+                                </span>
+                                <h3 class="text-5xl md:text-[64px] leading-[1.2] font-bold">
+                                    $114.99
+                                </h3>
+                                <span class="text-base text-white">
+                                    yearly
+                                </span>
+                                <div class="theme-btn w-full my-12 flex items-center justify-center">
+                                    Get started for free
+                                    <span>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g id="ArrowRight">
+                                                <path id="Vector"
+                                                    d="M12.122 7.30953L8.18453 11.247C8.10244 11.3291 7.9911 11.3752 7.875 11.3752C7.7589 11.3752 7.64756 11.3291 7.56547 11.247C7.48338 11.1649 7.43726 11.0536 7.43726 10.9375C7.43726 10.8214 7.48338 10.7101 7.56547 10.628L10.7565 7.4375H2.1875C2.07147 7.4375 1.96019 7.39141 1.87814 7.30936C1.79609 7.22731 1.75 7.11603 1.75 7C1.75 6.88397 1.79609 6.77269 1.87814 6.69064C1.96019 6.60859 2.07147 6.5625 2.1875 6.5625H10.7565L7.56547 3.37203C7.48338 3.28994 7.43726 3.1786 7.43726 3.0625C7.43726 2.9464 7.48338 2.83506 7.56547 2.75297C7.64756 2.67088 7.7589 2.62476 7.875 2.62476C7.9911 2.62476 8.10244 2.67088 8.18453 2.75297L12.122 6.69047C12.1627 6.7311 12.195 6.77935 12.217 6.83246C12.239 6.88557 12.2503 6.9425 12.2503 7C12.2503 7.05749 12.239 7.11442 12.217 7.16754C12.195 7.22065 12.1627 7.2689 12.122 7.30953Z"
+                                                    fill="white" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul class="dots-list ">
+                                    <li>
+                                        Unlimited Forms
+                                    </li>
+                                    <li>
+                                        Unlimited Submissions
+                                    </li>
+                                    <li>
+                                        1 workspace
+                                    </li>
+                                    <li>
+                                        1 user
+                                    </li>
+                                    <li>
+                                        File uploads (up to 5MB)
+                                    </li>
+                                    <li>
+                                        Analytics
+                                    </li>
+                                    <li>
+                                        Full form customisation
+                                    </li>
+                                    <li>
+                                        Multi-page forms
+                                    </li>
+                                    <li>
+                                        Form logic
+                                    </li>
+                                    <li>
+                                        Multiple integrations
+                                    </li>
+
+                                    <li>
+                                        Password-gated forms
+                                    </li>
+                                    <li class="text-grey">
+                                        AI Form builder <span class="c-gradient py-1.5 px-2 text-white rounded-full ml-2 text-xs">
+                                            comming soon
+                                        </span>
+                                    </li>
+                                    <li class="text-grey">
+                                        Payment module <span class="c-gradient py-1.5 px-2 text-white rounded-full ml-2 text-xs">
+                                            comming soon
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="p-6 sm:p-10 gradient-enterprise">
+                                <div class="flex mb-6 gap-2 items-center">
+                                    <object data="./dist/img/StarFour.svg" type="image/svg+xml"></object>
+                                    <h4 class="text-3xl md:text-[40px] font-semibold">Enterprise</h4>
+                                </div>
+                                <span class="text-2xl text-grey line-through relative">
+                                    $199.99
+                                </span>
+                                <h3 class="text-5xl md:text-[64px] leading-[1.2] font-bold">
+                                    $159.99
+                                </h3>
+                                <span class="text-base text-white">
+                                    yearly
+                                </span>
+                                <div class="theme-btn w-full my-12 flex items-center justify-center">
+                                    Get started for free
+                                    <span>
+                                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g id="ArrowRight">
+                                                <path id="Vector"
+                                                    d="M12.122 7.30953L8.18453 11.247C8.10244 11.3291 7.9911 11.3752 7.875 11.3752C7.7589 11.3752 7.64756 11.3291 7.56547 11.247C7.48338 11.1649 7.43726 11.0536 7.43726 10.9375C7.43726 10.8214 7.48338 10.7101 7.56547 10.628L10.7565 7.4375H2.1875C2.07147 7.4375 1.96019 7.39141 1.87814 7.30936C1.79609 7.22731 1.75 7.11603 1.75 7C1.75 6.88397 1.79609 6.77269 1.87814 6.69064C1.96019 6.60859 2.07147 6.5625 2.1875 6.5625H10.7565L7.56547 3.37203C7.48338 3.28994 7.43726 3.1786 7.43726 3.0625C7.43726 2.9464 7.48338 2.83506 7.56547 2.75297C7.64756 2.67088 7.7589 2.62476 7.875 2.62476C7.9911 2.62476 8.10244 2.67088 8.18453 2.75297L12.122 6.69047C12.1627 6.7311 12.195 6.77935 12.217 6.83246C12.239 6.88557 12.2503 6.9425 12.2503 7C12.2503 7.05749 12.239 7.11442 12.217 7.16754C12.195 7.22065 12.1627 7.2689 12.122 7.30953Z"
+                                                    fill="white" />
+                                            </g>
+                                        </svg>
+                                    </span>
+                                </div>
+                                <ul class="dots-list ">
+                                    <li>
+                                        Everything in <span class="text-blue"> Pro</span>
+                                    </li>
+                                    <li>
+                                        Custom domains
+                                    </li>
+                                    <li>
+                                        Unlimited workspaces
+                                    </li>
+                                    <li>
+                                        Unlimited users per workspace
+                                    </li>
+                                    <li>
+                                        File uploads (up to 20MB)
+                                    </li>
+                                    <li>
+                                        Priority support
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- FAQs -->
+            <div class="mt-20 block">
+                <h3 class="text-3xl sm:text-[40px] font-bold">
+                    FAQs
+                </h3>
+                <div>
+                    <div class="relative border-b border-[#454545] py-8">
+                        <input type="checkbox" id="toggle1" class="toggle hidden" />
+                        <label class="title text-white ttext-base sm:text-lg font-semibold block cursor-pointer pr-10"
+                            for="toggle1">
+                            Do I need an AirTable Pro account to use it?
+                        </label>
+                        <div class="content overflow-hidden">
+                            <p class="pt-2 text-grey text-sm">No you don’t. A free AirTable account will work
+                                perfectly fine with AirFormTable</p>
+                        </div>
+                    </div>
+                    <div class="relative border-b border-[#454545] py-8">
+                        <input type="checkbox" id="toggle2" class="toggle hidden" />
+                        <label class="title block text-white text-base sm:text-lg font-semibold cursor-pointer pr-10"
+                            for="toggle2">
+                            Do I need an AirTable Pro account to use it?
+                        </label>
+                        <div class="content  overflow-hidden">
+                            <p class="pt-2 text-grey text-sm">No you don’t. A free AirTable account will work
+                                perfectly fine with AirFormTable</p>
+                        </div>
+                    </div>
+                    <div class="relative border-b border-[#454545] py-8">
+                        <input type="checkbox" id="toggle3" class="toggle hidden" />
+                        <label class="title block text-white text-base sm:text-lg font-semibold cursor-pointer pr-10"
+                            for="toggle3">
+                            Do I need an AirTable Pro account to use it?
+                        </label>
+                        <div class="content  overflow-hidden">
+                            <p class="pt-2 text-grey text-sm">No you don’t. A free AirTable account will work
+                                perfectly fine with AirFormTable</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Trusted Companies -->
+            <div class="mt-24">
+                <h2 class="text-center mb-6 text-base">
+                    Our products are trusted by 2,000+ companies
+                </h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="partner">
+                        <img src="./dist/img/harvard.png" alt="harvard">
+                    </div>
+                    <div class="partner">
+                        <img src="./dist/img/yale.png" alt="yale">
+                    </div>
+                    <div class="partner">
+                        <img src="./dist/img/figma.png" alt="figma">
+                    </div>
+                    <div class="partner">
+                        <img src="./dist/img/microsoft.png" alt="microsoft">
+                    </div>
+                    <div class="partner">
+                        <img src="./dist/img/ftx.png" alt="ftx">
+                    </div>
+                    <div class="partner">
+                        <img src="./dist/img/deel.png" alt="deel">
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="py-16 sm:py-[90px] mt-32 footer-gradient">
+        <div class="max-w-[930px] mx-auto px-5 xl:px-0">
+            <div class="text-center mb-20">
+                <object data="./dist/img/PaperPlane.svg" type="image/svg+xml" class="block mx-auto"></object>
+                <h4 class="mb-8 mt-2 text-3xl sm:text-5xl font-semibold">Build your form on AirTable now</h4>
+                <a href="#" class="theme-btn flex items-center w-56 justify-center mx-auto">
+                    Get started for free
+                    <span>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="ArrowRight">
+                                <path id="Vector"
+                                    d="M12.122 7.30953L8.18453 11.247C8.10244 11.3291 7.9911 11.3752 7.875 11.3752C7.7589 11.3752 7.64756 11.3291 7.56547 11.247C7.48338 11.1649 7.43726 11.0536 7.43726 10.9375C7.43726 10.8214 7.48338 10.7101 7.56547 10.628L10.7565 7.4375H2.1875C2.07147 7.4375 1.96019 7.39141 1.87814 7.30936C1.79609 7.22731 1.75 7.11603 1.75 7C1.75 6.88397 1.79609 6.77269 1.87814 6.69064C1.96019 6.60859 2.07147 6.5625 2.1875 6.5625H10.7565L7.56547 3.37203C7.48338 3.28994 7.43726 3.1786 7.43726 3.0625C7.43726 2.9464 7.48338 2.83506 7.56547 2.75297C7.64756 2.67088 7.7589 2.62476 7.875 2.62476C7.9911 2.62476 8.10244 2.67088 8.18453 2.75297L12.122 6.69047C12.1627 6.7311 12.195 6.77935 12.217 6.83246C12.239 6.88557 12.2503 6.9425 12.2503 7C12.2503 7.05749 12.239 7.11442 12.217 7.16754C12.195 7.22065 12.1627 7.2689 12.122 7.30953Z"
+                                    fill="white" />
+                            </g>
+                        </svg>
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="bg-[#454545] h-[1px]"></div>
+
+            <div class="mt-[88px] md:flex justify-between">
+                <div class="w-44 mb-5">
+                    <img class="mb-2" src="./dist/img/footer-logo.png" alt="AirFormTable">
+                    <p class="text-sm text-grey">
+                        Build beautiful advanced forms in AirTable
+                    </p>
+                </div>
+                <div class="space-y-4 mb-5">
+                    <h6 class="text-white text-sm font-medium">
+                        Product
+                    </h6>
+                    <a href="#" class="text-grey text-sm hover:text-white transition">Features</a>
+                    <a href="#" class="text-grey text-sm hover:text-white transition">Pricing</a>
+                    <a href="#" class="text-grey text-sm hover:text-white transition">Faqs</a>
+                </div>
+                <div class="space-y-4 mb-5">
+                    <h6 class="text-white text-sm font-medium">
+                        Contact us
+                    </h6>
+                    <a href="#" class="text-grey text-sm hover:text-white transition">Email</a>
+                    <a href="#" class="text-grey text-sm hover:text-white transition">Twitter</a>
+                </div>
+                <div class="space-y-4 mb-5">
+                    <h6 class="text-white text-sm font-medium">
+                        Legal
+                    </h6>
+                    <a href="#" class="text-grey text-sm hover:text-white transition">Terms & conditions</a>
+                    <a href="#" class="text-grey text-sm hover:text-white transition">Privacy policy</a>
+                </div>
+
+            </div>
+            <p class="text-grey text-sm text-center mt-14 sm:mt-20">© Copyright 2023 AirTableForms. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // navbar 
+        document.getElementById("hamburger").onclick = function toggleMenu() {
+            const navToggle = document.getElementsByClassName("toggle");
+            for (let i = 0; i < navToggle.length; i++) {
+                navToggle.item(i).classList.toggle("hidden");
+            }
+        };
+
+
+        // tabs 
+        let tabsContainer = document.querySelector("#tabs");
+        let tabTogglers = tabsContainer.querySelectorAll("#tabs a");
+        tabTogglers.forEach(function (toggler) {
+            toggler.addEventListener("click", function (e) {
+                e.preventDefault();
+                let tabName = this.getAttribute("href");
+                let tabContents = document.querySelector("#tab-contents");
+                for (let i = 0; i < tabContents.children.length; i++) {
+                    tabTogglers[i].classList.remove("active"); tabContents.children[i].classList.remove("hidden");
+                    if ("#" + tabContents.children[i].id === tabName) {
+                        continue;
+                    }
+                    tabContents.children[i].classList.add("hidden");
+                }
+                e.target.classList.add("active", "pill-btn");
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>

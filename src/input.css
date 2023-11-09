@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'Aeonik';
+    src: url('../dist/fonts/Aeonik-Regular.eot');
+    src: url('../dist/fonts/Aeonik-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../dist/fonts/Aeonik-Regular.woff2') format('woff2'),
+        url('../dist/fonts/Aeonik-Regular.woff') format('woff'),
+        url('../dist/fonts/Aeonik-Regular.ttf') format('truetype'),
+        url('../dist/fonts/Aeonik-Regular.svg#Aeonik-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: #02020E url(../dist/img/h-bg.png) no-repeat top / contain;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    display: block;
+}
+
+.theme-btn {
+    @apply bg-blue py-3 px-4 rounded-md text-sm font-medium tracking-[-0.28px];
+}
+
+.theme-btn span {
+    @apply ml-1.5
+}
+
+
+.pill-btn {
+    @apply text-white text-base py-2 px-4 tracking-[-0.28px] rounded-3xl
+}
+.pill-btn.active {
+    @apply bg-blue
+}
+
+.partner {
+    border-radius: 200px;
+    background: radial-gradient(74.22% 64.62% at 26.36% 14.29%, #1A1A1A 0%, #151515 50%, #101010 100%);
+    backdrop-filter: blur(162px);
+    padding: 8px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.dots-list li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 9px;
+    font-size: 16px;
+    letter-spacing: -0.64px;
+    font-weight: 400;
+}
+
+.dots-list li::before {
+    content: "";
+    min-width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    top: 4px
+}
+
+.c-gradient {
+    background: radial-gradient(74.22% 64.62% at 26.36% 14.29%, #1A1A1A 0%, #151515 50%, #101010 100%);
+}
+
+.gradient-pro {
+    border-radius: 24px;
+    background: radial-gradient(74.22% 64.62% at 26.36% 14.29%, #040322 0%, #151638 50%, #040528 100%);
+}
+
+.gradient-enterprise {
+    border-radius: 24px;
+    background: radial-gradient(74.22% 64.62% at 26.36% 14.29%, #000 0%, #000 50%, #070707 100%);
+}
+
+.footer-gradient {
+    background: radial-gradient(74.22% 64.62% at 26.36% 14.29%, #1A1A1A 0%, #151515 50%, #101010 100%);
+}
+
+input::placeholder {
+    color: #454545;
+    font-size: 12px;
+}
+
+
+.content {
+    max-height: 0;
+}
+
+.toggle:checked+.title+.content {
+    max-height: 500px;
+}
+
+.toggle:checked+.title::before {
+    transform: rotate(90deg) !important;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .md\:text-4xl {
+        font-size: 2.25rem;
+        line-height: 1.2 !important;
+    }
+}
